@@ -14,9 +14,13 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
     public partial class TelaCompromissoForm : Form
     {
         private Compromisso compromisso;
+        public List<Contato> contatos;
+
         public TelaCompromissoForm()
         {
             InitializeComponent();
+
+
         }
 
         public Compromisso Compromisso
@@ -24,12 +28,28 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             get { return compromisso; }
             set
             {
-                txtNumero.Text = value.id.ToString();
+                txtId.Text = value.id.ToString();
                 txtAssunto.Text = value.assunto;
-                txtData.Text = value.dataCompromisso;
-                txtInicio.Text = value.horaInicio;
-                txtTermino.Text = value.horaTermino;
+                txtData.Value = value.dataCompromisso;
+                txtInicio.Value = value.horaInicio.Date;
+                txtTermino.Value = value.horaTermino.Date;
                 txtLocal.Text = value.local;
+                if (value.Contato != null)
+                {
+                    cbContato.SelectedItem = value.Contato.nome;
+                }
+            }
+        }
+
+
+
+
+        public void ObterContatos(List<Contato> contatos)
+        {
+            cbContato.Items.Clear();
+            foreach (Contato item in contatos)
+            {
+                cbContato.Items.Add(item);
             }
         }
 
@@ -37,11 +57,17 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
         {
 
             string assunto = txtAssunto.Text;
-            string data = txtData.Text;
-            string inicio = txtInicio.Text;
-            string termino = txtTermino.Text;
+            DateTime data = txtData.Value;
+            DateTime inicio = txtInicio.Value;
+            DateTime termino = txtTermino.Value;
             string local = txtLocal.Text;
-            compromisso = new Compromisso(assunto, data, inicio, termino, local);
+
+            Contato contato = contatos.Find(c => c.nome == cbContato.SelectedItem);
+
+            compromisso = new Compromisso(assunto, local, data, inicio.Date, termino.Date, contato);
+
+            if (txtId.Text != "0")
+                compromisso.id = Convert.ToInt32(txtId.Text);
 
         }
     }

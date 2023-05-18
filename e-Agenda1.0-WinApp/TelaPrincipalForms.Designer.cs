@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipalForms1));
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             contatosMenuItem = new ToolStripMenuItem();
@@ -36,7 +37,8 @@
             despesasMenuItem = new ToolStripMenuItem();
             despesasItem1 = new ToolStripMenuItem();
             categoriasMenuItem = new ToolStripMenuItem();
-            relatoriosToolStripMenuItem = new ToolStripMenuItem();
+            relatoriosMenuItem = new ToolStripMenuItem();
+            compromissosToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStrip1 = new ToolStrip();
@@ -44,6 +46,7 @@
             btnEditar = new ToolStripButton();
             btnExcluir = new ToolStripButton();
             labelTipoCadastro = new ToolStripLabel();
+            btnFiltrar = new ToolStripButton();
             panelRegistros = new Panel();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -52,7 +55,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, relatoriosToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, relatoriosMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -106,11 +109,18 @@
             categoriasMenuItem.Size = new Size(130, 22);
             categoriasMenuItem.Text = "Categorias";
             // 
-            // relatoriosToolStripMenuItem
+            // relatoriosMenuItem
             // 
-            relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            relatoriosToolStripMenuItem.Size = new Size(71, 20);
-            relatoriosToolStripMenuItem.Text = "Relatorios";
+            relatoriosMenuItem.DropDownItems.AddRange(new ToolStripItem[] { compromissosToolStripMenuItem });
+            relatoriosMenuItem.Name = "relatoriosMenuItem";
+            relatoriosMenuItem.Size = new Size(71, 20);
+            relatoriosMenuItem.Text = "Relatorios";
+            // 
+            // compromissosToolStripMenuItem
+            // 
+            compromissosToolStripMenuItem.Name = "compromissosToolStripMenuItem";
+            compromissosToolStripMenuItem.Size = new Size(154, 22);
+            compromissosToolStripMenuItem.Text = "Compromissos";
             // 
             // statusStrip1
             // 
@@ -129,7 +139,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, labelTipoCadastro });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, labelTipoCadastro, btnFiltrar });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 45);
@@ -178,6 +188,16 @@
             labelTipoCadastro.Size = new Size(75, 42);
             labelTipoCadastro.Text = "tipoCadastro";
             // 
+            // btnFiltrar
+            // 
+            btnFiltrar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnFiltrar.Image = (Image)resources.GetObject("btnFiltrar.Image");
+            btnFiltrar.ImageTransparentColor = Color.Magenta;
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(23, 42);
+            btnFiltrar.Text = "toolStripButton1";
+            btnFiltrar.Click += btnFiltrar_Click;
+            // 
             // panelRegistros
             // 
             panelRegistros.BorderStyle = BorderStyle.Fixed3D;
@@ -220,7 +240,7 @@
         private ToolStripMenuItem despesasMenuItem;
         private ToolStripMenuItem despesasItem1;
         private ToolStripMenuItem categoriasMenuItem;
-        private ToolStripMenuItem relatoriosToolStripMenuItem;
+        private ToolStripMenuItem relatoriosMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStrip toolStrip1;
@@ -229,5 +249,7 @@
         private ToolStripButton btnExcluir;
         private Panel panelRegistros;
         private ToolStripLabel labelTipoCadastro;
+        private ToolStripMenuItem compromissosToolStripMenuItem;
+        private ToolStripButton btnFiltrar;
     }
 }

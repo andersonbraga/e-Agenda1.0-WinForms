@@ -9,6 +9,7 @@ namespace e_Agenda1._0_WinApp.ModuloContato
     public class RepositorioContato
     {
         List<Contato> contatos = new List<Contato>();
+   
         private static int contador;
 
         public void Inserir(Contato contato)
@@ -38,6 +39,8 @@ namespace e_Agenda1._0_WinApp.ModuloContato
         {
             return contatos.FirstOrDefault(x => x.id == id);
         }
+
+        
 
         public void Excluir(Contato contato)
         {

@@ -34,15 +34,16 @@
             label4 = new Label();
             label5 = new Label();
             txtData = new DateTimePicker();
-            txtInicio = new TextBox();
-            txtTermino = new TextBox();
-            txtNumero = new TextBox();
+            txtId = new TextBox();
             txtAssunto = new TextBox();
-            checkBox1 = new CheckBox();
-            comboBox1 = new ComboBox();
+            chbCompromisso = new CheckBox();
+            cbContato = new ComboBox();
             btnGravar = new Button();
             btnCancelar = new Button();
             txtLocal = new TextBox();
+            txtInicio = new DateTimePicker();
+            txtTermino = new DateTimePicker();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -75,7 +76,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 146);
+            label4.Location = new Point(85, 144);
             label4.Name = "label4";
             label4.Size = new Size(36, 15);
             label4.TabIndex = 3;
@@ -84,7 +85,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(316, 146);
+            label5.Location = new Point(231, 144);
             label5.Name = "label5";
             label5.Size = new Size(50, 15);
             label5.TabIndex = 4;
@@ -94,59 +95,47 @@
             // 
             txtData.Location = new Point(85, 98);
             txtData.Name = "txtData";
-            txtData.Size = new Size(200, 23);
+            txtData.Size = new Size(291, 23);
             txtData.TabIndex = 5;
             // 
-            // txtInicio
+            // txtId
             // 
-            txtInicio.Location = new Point(85, 138);
-            txtInicio.Name = "txtInicio";
-            txtInicio.Size = new Size(100, 23);
-            txtInicio.TabIndex = 6;
-            // 
-            // txtTermino
-            // 
-            txtTermino.Location = new Point(388, 143);
-            txtTermino.Name = "txtTermino";
-            txtTermino.Size = new Size(100, 23);
-            txtTermino.TabIndex = 7;
-            // 
-            // txtNumero
-            // 
-            txtNumero.Location = new Point(102, 12);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(100, 23);
-            txtNumero.TabIndex = 8;
+            txtId.Location = new Point(85, 12);
+            txtId.Name = "txtId";
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(58, 23);
+            txtId.TabIndex = 8;
             // 
             // txtAssunto
             // 
-            txtAssunto.Location = new Point(102, 52);
+            txtAssunto.Location = new Point(85, 52);
             txtAssunto.Name = "txtAssunto";
             txtAssunto.Size = new Size(386, 23);
             txtAssunto.TabIndex = 9;
             // 
-            // checkBox1
+            // chbCompromisso
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(85, 196);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(281, 19);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "Desejar marcar um contato neste compromisso?";
-            checkBox1.UseVisualStyleBackColor = true;
+            chbCompromisso.AutoSize = true;
+            chbCompromisso.Location = new Point(85, 196);
+            chbCompromisso.Name = "chbCompromisso";
+            chbCompromisso.Size = new Size(281, 19);
+            chbCompromisso.TabIndex = 10;
+            chbCompromisso.Text = "Desejar marcar um contato neste compromisso?";
+            chbCompromisso.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbContato
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(102, 221);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 11;
+            cbContato.FormattingEnabled = true;
+            cbContato.Location = new Point(85, 221);
+            cbContato.Name = "cbContato";
+            cbContato.Size = new Size(291, 23);
+            cbContato.TabIndex = 11;
             // 
             // btnGravar
             // 
+            btnGravar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(575, 400);
+            btnGravar.Location = new Point(315, 348);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(75, 23);
             btnGravar.TabIndex = 12;
@@ -156,8 +145,9 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(666, 400);
+            btnCancelar.Location = new Point(406, 348);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 13;
@@ -166,25 +156,53 @@
             // 
             // txtLocal
             // 
-            txtLocal.Location = new Point(85, 167);
+            txtLocal.Location = new Point(371, 17);
             txtLocal.Name = "txtLocal";
             txtLocal.Size = new Size(100, 23);
             txtLocal.TabIndex = 14;
+            // 
+            // txtInicio
+            // 
+            txtInicio.CustomFormat = "";
+            txtInicio.Format = DateTimePickerFormat.Time;
+            txtInicio.Location = new Point(139, 140);
+            txtInicio.Name = "txtInicio";
+            txtInicio.Size = new Size(76, 23);
+            txtInicio.TabIndex = 15;
+            txtInicio.Value = new DateTime(2023, 5, 18, 0, 0, 0, 0);
+            // 
+            // txtTermino
+            // 
+            txtTermino.Format = DateTimePickerFormat.Time;
+            txtTermino.Location = new Point(287, 138);
+            txtTermino.Name = "txtTermino";
+            txtTermino.Size = new Size(89, 23);
+            txtTermino.TabIndex = 16;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(330, 20);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 15);
+            label7.TabIndex = 18;
+            label7.Text = "Local";
             // 
             // TelaCompromissoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(520, 393);
+            Controls.Add(label7);
+            Controls.Add(txtTermino);
+            Controls.Add(txtInicio);
             Controls.Add(txtLocal);
             Controls.Add(btnCancelar);
             Controls.Add(btnGravar);
-            Controls.Add(comboBox1);
-            Controls.Add(checkBox1);
+            Controls.Add(cbContato);
+            Controls.Add(chbCompromisso);
             Controls.Add(txtAssunto);
-            Controls.Add(txtNumero);
-            Controls.Add(txtTermino);
-            Controls.Add(txtInicio);
+            Controls.Add(txtId);
             Controls.Add(txtData);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -205,14 +223,15 @@
         private Label label4;
         private Label label5;
         private DateTimePicker txtData;
-        private TextBox txtInicio;
-        private TextBox txtTermino;
-        private TextBox txtNumero;
+        private TextBox txtId;
         private TextBox txtAssunto;
-        private CheckBox checkBox1;
-        private ComboBox comboBox1;
+        private CheckBox chbCompromisso;
+        private ComboBox cbContato;
         private Button btnGravar;
         private Button btnCancelar;
         private TextBox txtLocal;
+        private DateTimePicker txtInicio;
+        private DateTimePicker txtTermino;
+        private Label label7;
     }
 }

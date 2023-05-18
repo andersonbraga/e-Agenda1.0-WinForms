@@ -20,5 +20,6 @@ namespace e_Agenda1._0_WinApp.Compartilhado
         public abstract string ObterTipoCadastro();
         public abstract void Editar();
         public abstract void Excluir();
+        public abstract void Filtrar();
     }
 }
