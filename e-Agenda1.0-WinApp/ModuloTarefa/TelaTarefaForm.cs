@@ -27,13 +27,10 @@ namespace e_Agenda1._0_WinApp.ModuloTarefa
             }
             set
             {
-                txtId.Text = value.id.ToString();
-                txtNome.Text = value.nome;
-                txtTelefone.Text = value.telefone;
-                txtCargo.Text = value.cargo;
-                txtEmpresa.Text = value.empresa;
-                txtEmail.Text = value.email;
+                
             }
         }
+
+
     }
 }
