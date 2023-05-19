@@ -104,8 +104,8 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             if (telaFiltro.ShowDialog() == DialogResult.OK)
             {
                 StatusCompromissoEnum statusSelecionado = telaFiltro.StatusSelecionado;
-                DateTime dataInicial = telaFiltro.DataInicial.Date;
-                DateTime dataFinal = telaFiltro.DataFinal.Date;
+                DateTime dataInicial = telaFiltro.DataInicial;
+                DateTime dataFinal = telaFiltro.DataFinal;
                 CarregarCompromissoComFiltro(statusSelecionado, dataInicial, dataFinal);
             }
         }
