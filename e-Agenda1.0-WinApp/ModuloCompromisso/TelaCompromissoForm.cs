@@ -46,7 +46,7 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
 
         public void ObterContatos(List<Contato> contatos)
         {
-            cbContato.Items.Clear();
+            this.contatos = contatos;
             foreach (Contato item in contatos)
             {
                 cbContato.Items.Add(item);
@@ -66,8 +66,7 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
 
             compromisso = new Compromisso(assunto, local, data, inicio.Date, termino.Date, contato);
 
-            if (txtId.Text != "0")
-                compromisso.id = Convert.ToInt32(txtId.Text);
+            
 
         }
     }
