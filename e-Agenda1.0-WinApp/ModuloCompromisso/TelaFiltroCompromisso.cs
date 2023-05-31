@@ -38,19 +38,18 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             }
         }
 
-<<<<<<< HEAD
+
         public DateTime DataInicial()
         {
             return txtInicio.Value;
         }
-        public DateTime DataFinal ()
+        public DateTime DataFinal()
         {
             return txtFinal.Value;
-=======
+        }
 
 
-        public DateTime DataInicial { get { return DataInicial; } }
-        public DateTime DataFinal { get { return DataFinal; } }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,7 +63,7 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             
 
             Compromisso compromisso = new Compromisso(inicio, termino);
->>>>>>> 6a9927eb6322df6f13365c39ab38d380d8f496f8
+
         }
     }
 
