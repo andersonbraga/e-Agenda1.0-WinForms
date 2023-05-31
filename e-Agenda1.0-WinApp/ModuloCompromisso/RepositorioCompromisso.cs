@@ -47,21 +47,21 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             compromissos.Remove(compromisso);
         }
 
-        internal List<Compromisso> SelecionarCompromissosFuturos(DateTime dataInicial, DateTime dataFinal)
+        public List<Compromisso> SelecionarCompromissosFuturos(DateTime dataInicial, DateTime dataFinal)
         {
             List<Compromisso> compromissosFuturos = new List<Compromisso>();
 
             foreach (Compromisso item in compromissos)
             {
-                if (item.dataCompromisso > dataInicial)
+                if (item.dataCompromisso > dataInicial && item.dataCompromisso < dataFinal)
                 {
                     compromissosFuturos.Add(item);
                 }
             }
             return compromissosFuturos;
-        }
+        } 
 
-        internal List<Compromisso> SelecionarCompromissosPassados(DateTime now)
+        public List<Compromisso> SelecionarCompromissosPassados(DateTime now)
         {
             List<Compromisso> compromissosPassados = new List<Compromisso>();
 

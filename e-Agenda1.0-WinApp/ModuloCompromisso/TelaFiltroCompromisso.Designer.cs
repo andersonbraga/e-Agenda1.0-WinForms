@@ -118,12 +118,14 @@
             // 
             // button1
             // 
+            button1.DialogResult = DialogResult.OK;
             button1.Location = new Point(320, 349);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 8;
             button1.Text = "Filtrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 

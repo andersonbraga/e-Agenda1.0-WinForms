@@ -12,17 +12,10 @@ namespace e_Agenda1._0_WinApp.ModuloContato
 {
     public partial class ListagemContatoControl : UserControl
     {
-
         public ListagemContatoControl()
         {
-            InitializeComponent();
-
-
-
-           
-
+            InitializeComponent();                     
         }
-
 
         public void AtualizarRegistro(List<Contato> contatos)
         {

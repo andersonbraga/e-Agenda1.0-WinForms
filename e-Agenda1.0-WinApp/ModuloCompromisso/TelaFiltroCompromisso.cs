@@ -1,4 +1,5 @@
-﻿using System;
+﻿using e_Agenda1._0_WinApp.ModuloContato;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace e_Agenda1._0_WinApp.ModuloCompromisso
 {
@@ -36,6 +38,7 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             }
         }
 
+<<<<<<< HEAD
         public DateTime DataInicial()
         {
             return txtInicio.Value;
@@ -43,6 +46,25 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
         public DateTime DataFinal ()
         {
             return txtFinal.Value;
+=======
+
+
+        public DateTime DataInicial { get { return DataInicial; } }
+        public DateTime DataFinal { get { return DataFinal; } }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+           
+           
+            DateTime inicio = txtInicio.Value;
+            DateTime termino = txtFinal.Value;
+            
+
+            
+
+            Compromisso compromisso = new Compromisso(inicio, termino);
+>>>>>>> 6a9927eb6322df6f13365c39ab38d380d8f496f8
         }
     }
 

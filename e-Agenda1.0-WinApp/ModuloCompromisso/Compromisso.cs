@@ -17,7 +17,14 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
         public DateTime horaInicio;
         public DateTime horaTermino;
         public Contato Contato;
+        private DateTime inicio;
+        private DateTime termino;
 
+        public Compromisso(DateTime inicio, DateTime termino)
+        {
+            this.inicio = inicio;
+            this.termino = termino;
+        }
 
         public Compromisso(string assunto, string local, DateTime dataCompromisso, DateTime horaInicio, DateTime horaTermino, Contato Contato)
         {
