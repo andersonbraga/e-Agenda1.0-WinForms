@@ -31,8 +31,8 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
                 txtId.Text = value.id.ToString();
                 txtAssunto.Text = value.assunto;
                 txtData.Value = value.dataCompromisso;
-                txtInicio.Value = value.horaInicio.Date;
-                txtTermino.Value = value.horaTermino.Date;
+                txtInicio.Value = value.horaInicio;
+                txtTermino.Value = value.horaTermino;
                 txtLocal.Text = value.local;
                 if (value.Contato != null)
                 {
@@ -64,7 +64,7 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
 
             Contato contato = contatos.Find(c => c.nome == cbContato.SelectedItem);
 
-            compromisso = new Compromisso(assunto, local, data, inicio.Date, termino.Date, contato);
+            compromisso = new Compromisso(assunto, local, data, inicio, termino, contato);
 
             
 

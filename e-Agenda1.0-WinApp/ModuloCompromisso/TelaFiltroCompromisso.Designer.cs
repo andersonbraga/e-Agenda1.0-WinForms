@@ -34,8 +34,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            txtInicio = new DateTimePicker();
+            txtFinal = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();
@@ -100,21 +100,21 @@
             label3.TabIndex = 5;
             label3.Text = "Datat Final";
             // 
-            // dateTimePicker1
+            // txtInicio
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(136, 277);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(101, 23);
-            dateTimePicker1.TabIndex = 6;
+            txtInicio.Format = DateTimePickerFormat.Short;
+            txtInicio.Location = new Point(136, 277);
+            txtInicio.Name = "txtInicio";
+            txtInicio.Size = new Size(101, 23);
+            txtInicio.TabIndex = 6;
             // 
-            // dateTimePicker2
+            // txtFinal
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(386, 275);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(101, 23);
-            dateTimePicker2.TabIndex = 7;
+            txtFinal.Format = DateTimePickerFormat.Short;
+            txtFinal.Location = new Point(386, 275);
+            txtFinal.Name = "txtFinal";
+            txtFinal.Size = new Size(101, 23);
+            txtFinal.TabIndex = 7;
             // 
             // button1
             // 
@@ -141,8 +141,8 @@
             ClientSize = new Size(535, 386);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(txtFinal);
+            Controls.Add(txtInicio);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -163,8 +163,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker txtInicio;
+        private DateTimePicker txtFinal;
         private Button button1;
         private Button button2;
     }

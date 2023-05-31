@@ -36,8 +36,14 @@ namespace e_Agenda1._0_WinApp.ModuloCompromisso
             }
         }
 
-        public DateTime DataInicial { get { return DataInicial; } }
-        public DateTime DataFinal { get { return DataFinal; } }
+        public DateTime DataInicial()
+        {
+            return txtInicio.Value;
+        }
+        public DateTime DataFinal ()
+        {
+            return txtFinal.Value;
+        }
     }
 
 

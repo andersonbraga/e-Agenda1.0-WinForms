@@ -78,5 +78,10 @@ namespace e_Agenda1._0_WinApp
         {
             controlador.Filtrar();
         }
+
+        private void panelRegistros_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

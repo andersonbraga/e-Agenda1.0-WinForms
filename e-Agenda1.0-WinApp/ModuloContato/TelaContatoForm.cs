@@ -16,6 +16,7 @@ namespace e_Agenda1._0_WinApp.ModuloContato
         public TelaContatoForm()
         {
             InitializeComponent();
+           
         }
 
         public Contato Contato

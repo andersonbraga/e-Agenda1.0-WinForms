@@ -72,21 +72,21 @@
             // contatosMenuItem
             // 
             contatosMenuItem.Name = "contatosMenuItem";
-            contatosMenuItem.Size = new Size(154, 22);
+            contatosMenuItem.Size = new Size(180, 22);
             contatosMenuItem.Text = "Contatos";
             contatosMenuItem.Click += contatosMenuItem_Click;
             // 
             // compromissosMenuItem
             // 
             compromissosMenuItem.Name = "compromissosMenuItem";
-            compromissosMenuItem.Size = new Size(154, 22);
+            compromissosMenuItem.Size = new Size(180, 22);
             compromissosMenuItem.Text = "Compromissos";
             compromissosMenuItem.Click += compromissosMenuItem_Click;
             // 
             // tarefasMenuItem
             // 
             tarefasMenuItem.Name = "tarefasMenuItem";
-            tarefasMenuItem.Size = new Size(154, 22);
+            tarefasMenuItem.Size = new Size(180, 22);
             tarefasMenuItem.Text = "Tarefas";
             tarefasMenuItem.Click += tarefasMenuItem_Click;
             // 
@@ -94,7 +94,7 @@
             // 
             despesasMenuItem.DropDownItems.AddRange(new ToolStripItem[] { despesasItem1, categoriasMenuItem });
             despesasMenuItem.Name = "despesasMenuItem";
-            despesasMenuItem.Size = new Size(154, 22);
+            despesasMenuItem.Size = new Size(180, 22);
             despesasMenuItem.Text = "Despesas";
             // 
             // despesasItem1
@@ -206,6 +206,7 @@
             panelRegistros.Name = "panelRegistros";
             panelRegistros.Size = new Size(800, 359);
             panelRegistros.TabIndex = 3;
+            panelRegistros.Paint += panelRegistros_Paint;
             // 
             // TelaPrincipalForms1
             // 
